@@ -1,0 +1,24 @@
+class Solution: 
+    def convert(self, s , numRows): 
+        if numRows == 1 or numRows >= len(s): 
+            return s
+            
+        row = 0
+        step = 1
+        t = [''] * numRows
+        
+        for i in range(len(s)):
+            t[row] += s[i]
+            
+           
+            if row == numRows - 1:
+                step = -1   
+           
+            elif row == 0:
+                step = 1
+                
+            row = row + step
+
+        return ''.join(t)
+        
+        
