@@ -1,0 +1,20 @@
+email=input("Enter e-mail:")
+is_valid=True
+if email.count('@')!=1:
+   is_valid=false
+elif ' ' in email:
+   is_valid=false
+else:
+   parts=email.split('@')
+   local,domain=parts[0],parts[1]
+   if '.' not in domain and len(domain.split('.')[-1])<2:
+      is_valid=false
+   elif '..' in email:
+      is_valid=false
+   elif len(local)==0:
+      is_valid=false
+if is_valid:
+   print("valid email:")
+else:
+   print("Invalid email:")
+
