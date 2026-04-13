@@ -1,0 +1,16 @@
+// Given two service costs (first and second), determine:
+ Which one is higher
+ Or if both are equal
+Print the appropriate result
+
+n = int(input("Enter the number of test cases:"))
+for i in range(0, n):
+    a, b = input("Enter the cost of the first and second service: ").split()
+    if (a >= b):
+        print("FIRST")
+    elif (b >= a):
+        print("Second")
+    elif (a == b):
+        print("Any:")
+    else:
+        print("invalid:")
