@@ -1,0 +1,14 @@
+//
+Given the number of buns, check if they can be distributed among 4 people equally.
+        If divisible by 4 → Print "NO" (not possible to give equal buns to all 4)
+        If not divisible by 4 → Print "Yes" (possible to give some buns to each)
+
+n=int(input("Enter the number of test cases:"))
+for i in  range( 0,n):
+   n1=int(input("Enter the number of buns:"))
+   if n1%4==0:
+      print("NO")
+   else:
+      print("Yes")
+
+
