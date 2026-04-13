@@ -1,0 +1,10 @@
+// Checks if the number of tires can form complete sets of 4 (like cars/bikes).There is need of 4 tires for car and 2 tires for bike,the priority is for the car first then the bike and in the given no check the validation yes or no for he bike
+
+T = int(input("Enter the no of tyres:"))  
+if 1 < T < 100:        
+    if T % 4 == 0:     
+        print("Yes")
+    else:
+        print("No")
+else:
+    print("invalid syntax")
