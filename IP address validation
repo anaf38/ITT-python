@@ -1,0 +1,11 @@
+ip_str=input("Enter the ip address:")
+parts = ip_str.split('.')
+if len(parts) != 4:
+   return False
+for part in parts:
+   if not part.isdigit() or not (0 <= int(part) < 256):
+      return False
+   if len(part) > 1 and part[0] == '0':
+      return False
+return True
+ 
