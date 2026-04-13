@@ -1,0 +1,24 @@
+Problem Statement
+
+Suresh, Sundhar, and Raja have some coins. Raja is the umpire (referee) who doesn't play but contributes his coins. In each round:
+
+    The umpire (Raja) gives all his coins to the player who has fewer coins
+    The winner gives some coins to the loser
+    Finally, determine who has more coins - Suresh (N) or Sundhar (S)
+
+A=int(input("Enter the no of coins suresh initially have:"))
+B=int(input("Enter the no of coins sundhar initially have:"))
+C=int(input("Enter the no f coins Raja initially have:"))
+D=int(input("The no of coins winner give to the loser:"))
+if (A>=B):
+   B+=C
+else:
+   A+=C
+if (A>=B):
+   B+=D
+else:
+   A+=D
+if (A>=B):
+   print("N")
+else:
+   print("S")
