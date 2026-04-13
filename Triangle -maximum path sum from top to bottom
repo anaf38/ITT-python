@@ -1,0 +1,21 @@
+# Get number of test cases
+T = int(input("Enter number of test cases: "))
+
+for test in range(T):
+    # Get number of rows
+    N = int(input("Enter number of rows: "))
+    
+    triangle = []
+    
+    # Get each row
+    for i in range(N):
+        row = input(f"Enter row {i+1} (space separated): ").split()
+        row = [int(x) for x in row]
+        triangle.append(row)
+    
+    # Bottom-up DP to find max path sum
+    for i in range(N - 2, -1, -1):
+        for j in range(i + 1):
+            triangle[i][j] += max(triangle[i + 1][j], triangle[i + 1][j + 1])
+    
+    print("Maximum path sum:", triangle[0][0])
