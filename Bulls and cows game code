@@ -1,0 +1,26 @@
+a = list(input("Enter the secret digit: "))  # Secret number
+b = list(input("Enter the guess digit: "))   # Guess number
+
+h = 0  # Bulls (correct position)
+n = 0  # Cows (wrong position)
+
+for i in range(len(a)):
+    if a[i] == b[i]:
+        h += 1
+
+a_remaining = []  # Secret digits not matched
+b_remaining = []  # Guess digits not matched
+
+for i in range(len(a)):
+    if a[i] != b[i]:  # Only add non-matching positions
+        a_remaining.append(a[i])
+        b_remaining.append(b[i])
+
+for digit in a_remaining:
+    if digit in b_remaining:  # If secret digit exists in guess
+        n += 1                # It's a cow
+        b_remaining.remove(digit)  # Remove to avoid double count
+
+print(f"Bulls: {h}, Cows: {n}")
+
+
